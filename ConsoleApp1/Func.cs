@@ -71,14 +71,14 @@ public class Func
             case 39: return Math.Pow(x, 4) + Math.Pow(y, 4) + Math.Sin(t); //   u=x^4+y^4+sin(t)
             case 40: return Math.Pow(x, 4) + Math.Pow(y, 4) + Math.Exp(t); //   u=x^4+y^4+e^t
 
-            case 41: return Math.Pow(x, 5) + Math.Pow(y, 5); //                 u=x^3+y^3
-            case 42: return Math.Pow(x, 5) + Math.Pow(y, 5) + Math.Pow(t, 1); //u=x^3+y^3+t
-            case 43: return Math.Pow(x, 5) + Math.Pow(y, 5) + Math.Pow(t, 2); //u=x^3+y^3+t^2
-            case 44: return Math.Pow(x, 5) + Math.Pow(y, 5) + Math.Pow(t, 3); //u=x^3+y^3+t^3
-            case 45: return Math.Pow(x, 5) + Math.Pow(y, 5) + Math.Pow(t, 4); //u=x^3+y^3+t^4
-            case 46: return Math.Pow(x, 5) + Math.Pow(y, 5) + Math.Pow(t, 5); //u=x^3+y^3+t^5
-            case 47: return Math.Pow(x, 5) + Math.Pow(y, 5) + Math.Sin(t); //   u=x^3+y^3+sin(t)
-            case 48: return Math.Pow(x, 5) + Math.Pow(y, 5) + Math.Exp(t); //   u=x^3+y^3+e^t
+            case 41: return Math.Pow(x, 5) + Math.Pow(y, 5); //                 u=x^5+y^5
+            case 42: return Math.Pow(x, 5) + Math.Pow(y, 5) + Math.Pow(t, 1); //u=x^5+y^5+t
+            case 43: return Math.Pow(x, 5) + Math.Pow(y, 5) + Math.Pow(t, 2); //u=x^5+y^5+t^2
+            case 44: return Math.Pow(x, 5) + Math.Pow(y, 5) + Math.Pow(t, 3); //u=x^5+y^5+t^3
+            case 45: return Math.Pow(x, 5) + Math.Pow(y, 5) + Math.Pow(t, 4); //u=x^5+y^5+t^4
+            case 46: return Math.Pow(x, 5) + Math.Pow(y, 5) + Math.Pow(t, 5); //u=x^5+y^5+t^5
+            case 47: return Math.Pow(x, 5) + Math.Pow(y, 5) + Math.Sin(t); //   u=x^5+y^5+sin(t)
+            case 48: return Math.Pow(x, 5) + Math.Pow(y, 5) + Math.Exp(t); //   u=x^5+y^5+e^t
 
             case 49: return Math.Sin(x) + Math.Sin(y); //                       u=sin(x)+sin(y)
             case 50: return Math.Sin(x) + Math.Sin(y) + Math.Pow(t, 1); //      u=sin(x)+sin(y)+t

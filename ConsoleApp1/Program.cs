@@ -7,7 +7,7 @@ public static class Program
 {
     public static void Main()
     {
-        /*var funcEleptic = new[] 
+        var funcEleptic = new[] 
         { 
             "u=5",
             "u=x+y",
@@ -21,7 +21,7 @@ public static class Program
        for (int i = 1; i < 9; i++)
        {
            Elepticheskai(8*(i-1)+1, funcEleptic[i-1]);
-       }*/
+       }
        var funcParabal = new[] 
        { 
            "u=5",
@@ -90,7 +90,6 @@ public static class Program
            "u=exp(x)+exp(y)+e^t",
            "u=x^3+y^3+t^10"
        };
-       //KrankNicolson(22, funcParabal[22-1]);
 
        for (int i = 1; i < 66; i++)
        {

@@ -5,8 +5,8 @@
   "Zmax": 2,
   "Zmin": 1,
 
-  "Rpoint":2,
-  "Zpoint":2,
+  "Rpoint":17,
+  "Zpoint":17,
   "DischargeRatioR" : 1,
   "DischargeRatioZ" : 1
 }
