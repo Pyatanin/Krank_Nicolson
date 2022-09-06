@@ -1,5 +1,5 @@
 {
-  "OneBorder":[2],
-  "TwoBorder":[0],
+  "OneBorder":[0,1,2,3],
+  "TwoBorder":[-1],
   "ThreeBorder":[-1]
 }

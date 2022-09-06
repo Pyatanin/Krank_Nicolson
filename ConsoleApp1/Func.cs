@@ -19,12 +19,11 @@ public class Func
 
     public static double Sigma(double x, double y, double t)
     {
-        return 0.0;
+        return 1.0;
     }
 
     public static double RealF(double x, double y, double t,double function) // Реальная функция
     {
-        return x*x*x;
         switch (function)
         {
             case 1: return 5; //u=5
@@ -99,9 +98,11 @@ public class Func
             case 63: return Math.Exp(x) + Math.Exp(y) + Math.Sin(t); //         u=exp(x)+exp(y)+sin(t)
             case 64: return Math.Exp(x) + Math.Exp(y) + Math.Exp(t); //         u=exp(x)+exp(y)+e^t
             
-            case 65: return Math.Pow(x, 3) + Math.Pow(y, 3) + Math.Pow(t, 10); //         u=exp(x)+exp(y)+e^t
+            case 65: return Math.Pow(x, 3) + Math.Pow(y, 3) + Math.Pow(t, 10);
 
         }
+
+        return 0;
     }
 
     public static double Theta(double x, double y, double t, int border) // странный кружочек 2 краевые
@@ -165,7 +166,6 @@ public class Func
 
     public static double F(double x, double y, double t,double function) // правая часть
     {
-        return  -6*x+x*x*x;
         switch (function)
         {
             case 1: return 0; //                                                   u=5
@@ -242,6 +242,6 @@ public class Func
             
             case 65: return -(20 * Math.Pow(x, 3) + 20 * Math.Pow(y, 3)) + 10 * Math.Pow(t, 9);
         }
-
+        return 0;
     }
 }

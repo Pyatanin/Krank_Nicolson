@@ -7,7 +7,6 @@ public static class Program
 {
     public static void Main()
     {
-        Elepticheskai(1, "TEST");
         /*var funcEleptic = new[] 
         { 
             "u=5",
@@ -23,7 +22,7 @@ public static class Program
        {
            Elepticheskai(8*(i-1)+1, funcEleptic[i-1]);
        }*/
-       /*var funcParabal = new[] 
+       var funcParabal = new[] 
        { 
            "u=5",
            "u=5+t",
@@ -91,10 +90,12 @@ public static class Program
            "u=exp(x)+exp(y)+e^t",
            "u=x^3+y^3+t^10"
        };
+       //KrankNicolson(22, funcParabal[22-1]);
+
        for (int i = 1; i < 66; i++)
        {
            KrankNicolson(i, funcParabal[i-1]);
-       }*/
+       }
     }
 
 
@@ -105,6 +106,7 @@ public static class Program
         var boundary = JsonSerializer.Deserialize<BoundaryData>(File.ReadAllText("Data/Boundary.json"))!;
         var initial = JsonSerializer.Deserialize<Initial>(File.ReadAllText("Data/Initial.json"))!;
         var fem = new Fem(area, boundary, initial, true, 0, func);
+        Answer(fem, area, 0, fem.Slae.Qpred, 0, fem.TimeGrid.TimeNode[0], "Parobolicheskai", func, str);
         for (int i = 1; i < fem.TimeGrid.TimeNode.Length; i++)
         {
             var time = fem.TimeGrid.TimeNode[i];
@@ -122,6 +124,8 @@ public static class Program
             fem.Slae.LUsq(factoriz[0], factoriz[1], factoriz[2]);
             fem.Slae.LoSPrecond(factoriz[0], factoriz[1], factoriz[2], ref fem.Slae.Q, ref k, ref error);
             Answer(fem, area, k, fem.Slae.Q, error, fem.TimeGrid.TimeNode[i], "Parobolicheskai", func, str);
+            fem.Slae.Q.AsSpan().CopyTo(fem.Slae.Qpred);
+            fem.Slae.Q.AsSpan().Fill(1);
         }
     }
 
